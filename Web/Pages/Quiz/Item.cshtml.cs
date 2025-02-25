@@ -29,11 +29,17 @@ namespace BackendLab01.Pages
         [BindProperty]
         public int ItemId { get; set; }
         
-        public void OnGet(int quizId, int itemId)
+        public IActionResult OnGet(int quizId, int itemId)
         {
+            
+            
             QuizId = quizId;
             ItemId = itemId;
             var quiz = _userService.FindQuizById(quizId);
+            if (itemId >= quiz.Items.Count())
+            {
+                return RedirectToPage("Summary");
+            }
             var quizItem = quiz?.Items[itemId - 1];
             Question = quizItem?.Question;
             Answers = new List<string>();
@@ -42,6 +48,7 @@ namespace BackendLab01.Pages
                 Answers.AddRange(quizItem?.IncorrectAnswers);
                 Answers.Add(quizItem?.CorrectAnswer);
             }
+                
         }
 
         public IActionResult OnPost()

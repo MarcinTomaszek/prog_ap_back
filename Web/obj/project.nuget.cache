@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fVNLV79xcR+RJeJB9l9JLzVjpyUt2c8nnYtYlUrdBEeDt9oL7EAY5VDDT7rPE1w8IAc4ohGqly0g2Yp/xSlU1w==",
+  "dgSpecHash": "O6d5qRyS+LORRSQniOAfr+0XWRwVvWVPg/VnYN60uc8Of8muwldQDFm64Q1u7xcJFfJ57IKOQVos3Ok4OPeCjg==",
   "success": true,
   "projectFilePath": "D:\\Users\\marcin.tomaszek\\RiderProjects\\Laboratorium1\\Web\\Web.csproj",
   "expectedPackageFiles": [
@@ -157,11 +157,7 @@
     "D:\\Users\\marcin.tomaszek\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "D:\\Users\\marcin.tomaszek\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "D:\\Users\\marcin.tomaszek\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "D:\\Users\\marcin.tomaszek\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "D:\\Users\\marcin.tomaszek\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
-    "D:\\Users\\marcin.tomaszek\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
-    "D:\\Users\\marcin.tomaszek\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
-    "D:\\Users\\marcin.tomaszek\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.20\\microsoft.netcore.app.host.win-x64.7.0.20.nupkg.sha512"
+    "D:\\Users\\marcin.tomaszek\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
