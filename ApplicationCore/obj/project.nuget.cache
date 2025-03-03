@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "g8HR4t/OBXdaxZ91yo2Ggp0ZE2L2jzracUVMe7XlA8qWROnEmyKg/9jE8In1+TeVR6vteiw5ZICggqY2/cIzPA==",
+  "dgSpecHash": "m/xE6MHVN8y4tDHeY92pw2gsgsEjX8JFR7eReC8m9Vq5uW4zSWroosNosABXW6fPslO9UOOJ43hT5V+l8ieJcQ==",
   "success": true,
-  "projectFilePath": "D:\\Users\\marcin.tomaszek\\RiderProjects\\Laboratorium1\\ApplicationCore\\ApplicationCore.csproj",
+  "projectFilePath": "D:\\RiderProjects\\prog_ap_back\\ApplicationCore\\ApplicationCore.csproj",
   "expectedPackageFiles": [
-    "D:\\Users\\marcin.tomaszek\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
-    "D:\\Users\\marcin.tomaszek\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
-    "D:\\Users\\marcin.tomaszek\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
+    "C:\\Users\\bluej\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\bluej\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\bluej\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }

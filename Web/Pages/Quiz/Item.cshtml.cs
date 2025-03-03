@@ -36,24 +36,57 @@ namespace BackendLab01.Pages
             QuizId = quizId;
             ItemId = itemId;
             var quiz = _userService.FindQuizById(quizId);
-            if (itemId >= quiz.Items.Count())
+            
+            if (quiz == null)
             {
-                return RedirectToPage("Summary");
+                return NotFound("Niema Takiego quizu");
             }
-            var quizItem = quiz?.Items[itemId - 1];
-            Question = quizItem?.Question;
-            Answers = new List<string>();
-            if (quizItem is not null)
+            
+            if (itemId > quiz.Items.Count())
             {
-                Answers.AddRange(quizItem?.IncorrectAnswers);
-                Answers.Add(quizItem?.CorrectAnswer);
+                return RedirectToPage("Summary", new {quizId=quizId,itemId=itemId});
             }
-                
+            
+            var quizItem = quiz.Items.ElementAtOrDefault(itemId - 1);
+            
+            if (quizItem == null)
+            {
+                return NotFound("Taki element nie istnieje.");
+            }
+            Question = quizItem.Question;
+
+            Answers = new List<string>(quizItem.IncorrectAnswers)
+            {
+                quizItem.CorrectAnswer
+            };
+
+            return Page();
         }
 
         public IActionResult OnPost()
         {
-            return RedirectToPage("Item", new {quizId = QuizId, itemId = ItemId + 1});
+            var quiz = _userService.FindQuizById(QuizId);
+            if (quiz == null)
+            {
+                return NotFound("Quiz not found.");
+            }
+
+            var quizItem = quiz.Items.ElementAtOrDefault(ItemId - 1);
+            if (quizItem == null)
+            {
+                return NotFound("Quiz item not found.");
+            }
+
+            int userId = 1;
+            _userService.SaveUserAnswerForQuiz(QuizId, userId, quizItem.Id, UserAnswer.Trim());
+            
+            if (ItemId >= quiz.Items.Count)
+            {
+                return RedirectToPage("Summary", new { quizId = QuizId,ItemId=1 });
+            }
+    
+            return RedirectToPage("Item", new { quizId = QuizId, itemId = ItemId + 1 });
+        
         }
     }
 }

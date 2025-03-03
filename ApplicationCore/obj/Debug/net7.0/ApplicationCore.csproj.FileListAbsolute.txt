@@ -10,3 +10,15 @@ D:\Users\marcin.tomaszek\RiderProjects\Laboratorium1\ApplicationCore\obj\Debug\n
 D:\Users\marcin.tomaszek\RiderProjects\Laboratorium1\ApplicationCore\obj\Debug\net7.0\refint\ApplicationCore.dll
 D:\Users\marcin.tomaszek\RiderProjects\Laboratorium1\ApplicationCore\obj\Debug\net7.0\ApplicationCore.pdb
 D:\Users\marcin.tomaszek\RiderProjects\Laboratorium1\ApplicationCore\obj\Debug\net7.0\ref\ApplicationCore.dll
+D:\RiderProjects\prog_ap_back\ApplicationCore\bin\Debug\net7.0\ApplicationCore.deps.json
+D:\RiderProjects\prog_ap_back\ApplicationCore\bin\Debug\net7.0\ApplicationCore.dll
+D:\RiderProjects\prog_ap_back\ApplicationCore\bin\Debug\net7.0\ApplicationCore.pdb
+D:\RiderProjects\prog_ap_back\ApplicationCore\obj\Debug\net7.0\ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\RiderProjects\prog_ap_back\ApplicationCore\obj\Debug\net7.0\ApplicationCore.AssemblyInfoInputs.cache
+D:\RiderProjects\prog_ap_back\ApplicationCore\obj\Debug\net7.0\ApplicationCore.AssemblyInfo.cs
+D:\RiderProjects\prog_ap_back\ApplicationCore\obj\Debug\net7.0\ApplicationCore.csproj.CoreCompileInputs.cache
+D:\RiderProjects\prog_ap_back\ApplicationCore\obj\Debug\net7.0\ApplicationCore.sourcelink.json
+D:\RiderProjects\prog_ap_back\ApplicationCore\obj\Debug\net7.0\ApplicationCore.dll
+D:\RiderProjects\prog_ap_back\ApplicationCore\obj\Debug\net7.0\refint\ApplicationCore.dll
+D:\RiderProjects\prog_ap_back\ApplicationCore\obj\Debug\net7.0\ApplicationCore.pdb
+D:\RiderProjects\prog_ap_back\ApplicationCore\obj\Debug\net7.0\ref\ApplicationCore.dll

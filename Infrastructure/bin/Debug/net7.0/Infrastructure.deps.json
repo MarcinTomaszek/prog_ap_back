@@ -128,10 +128,7 @@
       },
       "ApplicationCore/1.0.0": {
         "runtime": {
-          "ApplicationCore.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "ApplicationCore.dll": {}
         }
       }
     }
