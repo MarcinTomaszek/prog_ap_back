@@ -154,7 +154,8 @@
 
     private void PrivateMessage(string name, string message)
     {
-        _messages.Add(new Message(name, $"[Private]: {message}", false));
+        string to = _username==name ? _to: name;
+        _messages.Add(new Message(to, $"[Private]: {message}", _username==name));
         InvokeAsync(StateHasChanged);
     }
 

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlazorChat")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a10fb59d6a7982fccc67d143bb9359d3ae3c2c5d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0130e5ec8249f3bc0b2edd95b16fa74dccad04f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlazorChat")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlazorChat")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
