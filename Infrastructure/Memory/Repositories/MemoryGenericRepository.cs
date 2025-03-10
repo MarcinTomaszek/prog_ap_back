@@ -53,7 +53,12 @@ public class MemoryGenericRepository<T, K>:IGenericRepository<T, K> where T: cla
         {
             entity.Id = _idGenerator.Next;
         }
-        _data[entity.Id]= entity;
+        else if (entity.Id == null || entity.Id.Equals(default(K)))
+        {
+            throw new InvalidOperationException("Entity ID must be set.");
+        }
+
+        _data[entity.Id] = entity;
         return entity;
     }
 

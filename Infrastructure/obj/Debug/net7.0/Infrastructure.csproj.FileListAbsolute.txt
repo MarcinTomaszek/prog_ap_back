@@ -25,8 +25,8 @@ D:\RiderProjects\prog_ap_back\Infrastructure\obj\Debug\net7.0\Infrastructure.Ass
 D:\RiderProjects\prog_ap_back\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfo.cs
 D:\RiderProjects\prog_ap_back\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CoreCompileInputs.cache
 D:\RiderProjects\prog_ap_back\Infrastructure\obj\Debug\net7.0\Infrastructure.sourcelink.json
-D:\RiderProjects\prog_ap_back\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CopyComplete
 D:\RiderProjects\prog_ap_back\Infrastructure\obj\Debug\net7.0\Infrastructure.dll
 D:\RiderProjects\prog_ap_back\Infrastructure\obj\Debug\net7.0\refint\Infrastructure.dll
 D:\RiderProjects\prog_ap_back\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
 D:\RiderProjects\prog_ap_back\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll
+D:\RiderProjects\prog_ap_back\Infrastructure\obj\Debug\net7.0\Infrastr.15EFFBFE.Up2Date
