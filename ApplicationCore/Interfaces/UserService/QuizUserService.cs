@@ -38,4 +38,9 @@ public class QuizUserService: IQuizUserService
     {
         return answerRepository.FindBySpecification(new QuizItemsForQuizIdFilledByUser(quizId, userId)).ToList();
     }
+
+    public IEnumerable<Quiz> FindAllQuizzes()
+    {
+        return quizRepository.FindAll();
+    }
 }
