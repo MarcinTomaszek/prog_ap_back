@@ -1,7 +1,7 @@
 using ApplicationCore.Commons.Functions;
 using BackendLab01;
 
-namespace WebApplication1.Properties.DTO;
+namespace WebAPI.DTO;
 
 public class QuizItemDto
 {

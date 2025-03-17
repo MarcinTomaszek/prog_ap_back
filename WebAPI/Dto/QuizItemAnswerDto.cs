@@ -1,5 +1,4 @@
-namespace WebApplication1.Properties.DTO;
-
+namespace WebAPI.DTO;
 public class QuizItemAnswerDto
 {
     public int UserId { get; set; }

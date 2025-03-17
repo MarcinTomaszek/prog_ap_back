@@ -25,7 +25,7 @@ public static class SeedData
             quiz2_Items.Add(quizItemRepo.Add(new QuizItem(id: 6, correctAnswer: "3", incorrectAnswers: new List<string>(){"1", "2", "4"},question: "Ile to jest 1 + 2?")));
             quizRepo.Add(new Quiz(id: 2, items: quiz2_Items, title: "Matematyka"));
 
-            
+
         }
     }
 }

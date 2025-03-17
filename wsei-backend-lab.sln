@@ -10,7 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorChat", "BlazorChat\BlazorChat.csproj", "{ADB85C0D-E6A1-41E3-B174-3414DC57A4F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{37829D27-93C8-4DA5-A435-787DF16BEA3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{5B629449-752F-4513-A1D1-CD3C57BE774F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,9 +38,9 @@ Global
 		{ADB85C0D-E6A1-41E3-B174-3414DC57A4F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADB85C0D-E6A1-41E3-B174-3414DC57A4F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADB85C0D-E6A1-41E3-B174-3414DC57A4F3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{37829D27-93C8-4DA5-A435-787DF16BEA3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37829D27-93C8-4DA5-A435-787DF16BEA3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37829D27-93C8-4DA5-A435-787DF16BEA3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37829D27-93C8-4DA5-A435-787DF16BEA3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B629449-752F-4513-A1D1-CD3C57BE774F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B629449-752F-4513-A1D1-CD3C57BE774F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B629449-752F-4513-A1D1-CD3C57BE774F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B629449-752F-4513-A1D1-CD3C57BE774F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
