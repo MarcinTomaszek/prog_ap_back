@@ -1,7 +1,6 @@
-using BackendLab01;
-using Microsoft.AspNetCore.Http;
+using ApplicationCore.Interfaces.UserService;
 using Microsoft.AspNetCore.Mvc;
-using WebAPI.DTO;
+using WebAPI.Dto;
 
 namespace WebAPI.Controllers
 {
@@ -48,13 +47,23 @@ namespace WebAPI.Controllers
         
         [HttpGet]
         [Route("{quizId}/users/{userId}/result")]
-        public ActionResult<QuizResultDto> GetQuizResultForUser(int quizId, int userId)
+        public ActionResult<object> GetQuizResultForUser(int quizId, int userId)
         {
-            int correctAnswers = _service.CountCorrectAnswersForQuizFilledByUser(quizId, userId);
-
-            var resultDto = new QuizResultDto(quizId, userId, correctAnswers);
-
-            return Ok(resultDto);
+            var feedback = _service.GetUserAnswersForQuiz(quizId, userId);
+            return new 
+            {
+                quizId = quizId,
+                userId = userId,
+                totalQuestions = _service.FindQuizById(quizId)?.Items.Count??0,
+                answers = feedback.Select(a =>
+                    new
+                    {
+                        question = a.QuizItem.Question,
+                        answer = a.Answer,
+                        isCorrect = a.IsCorrect()
+                    }
+                ).AsEnumerable()
+            };
         }
     }
 }

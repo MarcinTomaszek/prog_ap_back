@@ -1,4 +1,4 @@
-namespace BackendLab01;
+namespace ApplicationCore.Models;
 
 public class ChatUser:User
 {

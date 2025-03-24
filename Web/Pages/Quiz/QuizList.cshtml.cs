@@ -1,6 +1,7 @@
+using ApplicationCore.Interfaces.AdminService;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace BackendLab01.Pages;
+namespace BackendLab01.Pages.Quiz;
 
 public class QuizList : PageModel
 {
@@ -11,7 +12,7 @@ public class QuizList : PageModel
         _quizAdminService = quizAdminService;
     }
 
-    public  List<BackendLab01.Quiz> quizList { get; set; }
+    public  List<ApplicationCore.Models.QuizAggregate.Quiz> quizList { get; set; }
 
     public void OnGet()
     {

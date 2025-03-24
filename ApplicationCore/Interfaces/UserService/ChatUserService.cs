@@ -1,6 +1,7 @@
-using ApplicationCore.Interfaces.Repository;
+using ApplicationCore.Commons.Repository;
+using ApplicationCore.Models;
 
-namespace BackendLab01;
+namespace ApplicationCore.Interfaces.UserService;
 
 public class ChatUserService:IChatUserService
 {

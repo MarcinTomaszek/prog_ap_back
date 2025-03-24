@@ -10017,23 +10017,23 @@
     ]
   },
   "packageFolders": {
-    "D:\\Users\\marcin.tomaszek\\.nuget\\packages\\": {},
+    "C:\\Users\\bluej\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\marcin.tomaszek\\RiderProjects\\prog_ap_back\\Web\\Web.csproj",
+      "projectUniqueName": "D:\\RiderProjects\\prog_ap_back\\Web\\Web.csproj",
       "projectName": "Web",
-      "projectPath": "D:\\Users\\marcin.tomaszek\\RiderProjects\\prog_ap_back\\Web\\Web.csproj",
-      "packagesPath": "D:\\Users\\marcin.tomaszek\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\marcin.tomaszek\\RiderProjects\\prog_ap_back\\Web\\obj\\",
+      "projectPath": "D:\\RiderProjects\\prog_ap_back\\Web\\Web.csproj",
+      "packagesPath": "C:\\Users\\bluej\\.nuget\\packages\\",
+      "outputPath": "D:\\RiderProjects\\prog_ap_back\\Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "D:\\Users\\marcin.tomaszek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bluej\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -10042,17 +10042,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Users\\marcin.tomaszek\\RiderProjects\\prog_ap_back\\ApplicationCore\\ApplicationCore.csproj": {
-              "projectPath": "D:\\Users\\marcin.tomaszek\\RiderProjects\\prog_ap_back\\ApplicationCore\\ApplicationCore.csproj"
+            "D:\\RiderProjects\\prog_ap_back\\ApplicationCore\\ApplicationCore.csproj": {
+              "projectPath": "D:\\RiderProjects\\prog_ap_back\\ApplicationCore\\ApplicationCore.csproj"
             },
-            "D:\\Users\\marcin.tomaszek\\RiderProjects\\prog_ap_back\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "D:\\Users\\marcin.tomaszek\\RiderProjects\\prog_ap_back\\Infrastructure\\Infrastructure.csproj"
+            "D:\\RiderProjects\\prog_ap_back\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "D:\\RiderProjects\\prog_ap_back\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -10065,9 +10066,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
+        "auditMode": "all"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -10089,6 +10090,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.11, 8.0.11]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[8.0.11, 8.0.11]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.11, 8.0.11]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.11, 8.0.11]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -10097,8 +10116,70 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Pakiet „NuGet.Common” 6.3.1 ma znane wysoka luki w zabezpieczeniach o ważności, https://github.com/advisories/GHSA-6qmf-mmc7-6c2p",
+      "libraryId": "NuGet.Common",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1904",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Pakiet „NuGet.Packaging” 6.3.1 ma znane krytyczna luki w zabezpieczeniach o ważności, https://github.com/advisories/GHSA-68w7-72jg-6qpp",
+      "libraryId": "NuGet.Packaging",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Pakiet „NuGet.Protocol” 6.3.1 ma znane wysoka luki w zabezpieczeniach o ważności, https://github.com/advisories/GHSA-6qmf-mmc7-6c2p",
+      "libraryId": "NuGet.Protocol",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Pakiet „System.Formats.Asn1” 5.0.0 ma znane wysoka luki w zabezpieczeniach o ważności, https://github.com/advisories/GHSA-447r-wph3-92pm",
+      "libraryId": "System.Formats.Asn1",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Pakiet „System.Net.Http” 4.3.0 ma znane wysoka luki w zabezpieczeniach o ważności, https://github.com/advisories/GHSA-7jgj-8wvc-jh57",
+      "libraryId": "System.Net.Http",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Pakiet „System.Text.RegularExpressions” 4.3.0 ma znane wysoka luki w zabezpieczeniach o ważności, https://github.com/advisories/GHSA-cmhx-cq75-c4mj",
+      "libraryId": "System.Text.RegularExpressions",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

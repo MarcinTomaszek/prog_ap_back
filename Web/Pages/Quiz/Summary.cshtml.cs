@@ -1,9 +1,8 @@
-﻿using System.Numerics;
+﻿using ApplicationCore.Interfaces.UserService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.CodeAnalysis.Elfie.Serialization;
 
-namespace BackendLab01.Pages;
+namespace BackendLab01.Pages.Quiz;
 
 public class Summary : PageModel
 {

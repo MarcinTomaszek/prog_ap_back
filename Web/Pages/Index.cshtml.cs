@@ -1,6 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+using ApplicationCore.Models;
 namespace BackendLab01.Pages;
 
 public class IndexModel : PageModel

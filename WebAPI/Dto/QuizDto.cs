@@ -1,6 +1,6 @@
-using BackendLab01;
+using ApplicationCore.Models.QuizAggregate;
 
-namespace WebAPI.DTO;
+namespace WebAPI.Dto;
 
 public class QuizDto
 {

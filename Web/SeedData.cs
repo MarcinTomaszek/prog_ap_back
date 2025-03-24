@@ -1,7 +1,7 @@
-﻿using ApplicationCore.Interfaces.Repository;
-using BackendLab01;
+﻿using ApplicationCore.Commons.Repository;
+using ApplicationCore.Models.QuizAggregate;
 
-namespace Infrastructure.Memory;
+namespace BackendLab01;
 public static class SeedData
 {
     public static void Seed(this WebApplication app)

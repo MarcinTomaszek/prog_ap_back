@@ -1,9 +1,11 @@
-using ApplicationCore.Interfaces.Repository;
-using BackendLab01;
+using ApplicationCore.Commons.Repository;
+using ApplicationCore.Interfaces.UserService;
+using ApplicationCore.Models;
 using BlazorChat;
 using BlazorChat.Components;
 using Infrastructure.Memory;
-using Infrastructure.Memory.Repository;
+using Infrastructure.Memory.Generators;
+using Infrastructure.Memory.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSignalR();               
