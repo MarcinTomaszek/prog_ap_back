@@ -8,6 +8,8 @@ using WebAPI.Dto;
 
 namespace WebAPI.Controllers;
 
+[Route("api/v1/admin/quizzes")]
+[ApiController]
 public class ApiQuizAdminController : Controller
 {
     private readonly IQuizAdminService _service;
