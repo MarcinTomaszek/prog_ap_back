@@ -18,6 +18,19 @@ public class QuizAdminService:IQuizAdminService
     {
         return _quizRepository.Add(quiz);
     }
+
+    public bool DeleteQuiz(int id)
+    {
+
+        if (_quizRepository.FindById(id).Items.Count == 0)
+        {
+            _quizRepository.RemoveById(id);
+            return true;
+        }
+            
+        return false;
+    }
+
     public QuizItem AddQuizItemToQuiz(int quizId, QuizItem item)
     {
         var quiz = _quizRepository.FindById(quizId);
@@ -54,5 +67,19 @@ public class QuizAdminService:IQuizAdminService
 
     public List<Quiz> FindAllQuizzes()
     { return _quizRepository.FindAll();
+    }
+    public Quiz UpdateQuiz(int quizId, Quiz updatedQuiz)
+    {
+        var existingQuiz = _quizRepository.FindById(quizId);
+        if (existingQuiz == null)
+        {
+            throw new Exception($"Quiz with ID {quizId} not found.");
+        }
+        existingQuiz.Title = updatedQuiz.Title;
+        existingQuiz.Items = updatedQuiz.Items;
+        
+        _quizRepository.Update(quizId, existingQuiz);
+    
+        return existingQuiz;
     }
 }

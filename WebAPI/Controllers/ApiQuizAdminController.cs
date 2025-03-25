@@ -1,6 +1,8 @@
+using System.Net;
 using ApplicationCore.Interfaces.AdminService;
 using ApplicationCore.Models.QuizAggregate;
 using AutoMapper;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using WebAPI.Dto;
@@ -15,6 +17,7 @@ public class ApiQuizAdminController : Controller
     private readonly IQuizAdminService _service;
     private readonly IMapper _mapper;
     
+    
     public ApiQuizAdminController(IQuizAdminService service, IMapper mapper)
     {
         _service = service;
@@ -22,9 +25,10 @@ public class ApiQuizAdminController : Controller
     }
     
     //GET
-    public IActionResult Index()
+    [HttpGet]
+    public ActionResult<List<Quiz>> Index()
     {
-        return RedirectToPage("/Index");
+        return _service.FindAllQuizzes() is null ? NotFound() :_service.FindAllQuizzes()  ;
     }
     
     //POST
@@ -45,6 +49,16 @@ public class ApiQuizAdminController : Controller
     {
         var quiz = _service.FindAllQuizzes().FirstOrDefault(q => q.Id == quizId);
         return quiz is null ? NotFound() : quiz;
+    }
+    
+    //GET specific item from quiz 
+    [HttpGet]
+    [Route("{quizId}/{questionID}")]
+    public ActionResult<QuizItem> GetQuizQuestion(int quizId, int questionID)
+    {
+        var quiz = _service.FindAllQuizzes().FirstOrDefault(q => q.Id == quizId);
+        var question = quiz.Items.Where(i => i.Id == questionID).FirstOrDefault();
+        return question is null ? NotFound() : question;
     }
     
     //PATCH
@@ -75,4 +89,27 @@ public class ApiQuizAdminController : Controller
         }
         return Ok(_service.FindAllQuizzes().FirstOrDefault(q => q.Id == quizId));
     }
+    
+    [HttpPut]
+    [Route("{quizId}")]
+    public ActionResult<Quiz> UpdateQuiz(int quizId, [FromBody] Quiz updatedQuiz)
+    {
+        try
+        {
+            var quiz = _service.UpdateQuiz(quizId, updatedQuiz);
+            return Ok(quiz);
+        }
+        catch (Exception ex)
+        {
+            return NotFound(new { error = ex.Message });
+        }
+    }
+    
+    [HttpDelete]
+    [Route("{quizId}")]
+    public ActionResult  GetQuizQuestion(int quizId)
+    {
+        return _service.DeleteQuiz(quizId) ? NoContent() : BadRequest("Quiz have items");
+    }
+    
 }

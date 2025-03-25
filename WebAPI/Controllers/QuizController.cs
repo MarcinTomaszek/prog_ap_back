@@ -45,12 +45,13 @@ namespace WebAPI.Controllers
             return Ok("Answer saved successfully");
         }
         
+        
         [HttpGet]
-        [Route("{quizId}/users/{userId}/result")]
-        public ActionResult<object> GetQuizResultForUser(int quizId, int userId)
+        [Route("{quizId}/answers/{userId}")]
+        public ActionResult<object> GetQuizFeedback(int quizId, int userId)
         {
             var feedback = _service.GetUserAnswersForQuiz(quizId, userId);
-            return new 
+            return new
             {
                 quizId = quizId,
                 userId = userId,
