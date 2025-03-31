@@ -1,11 +1,11 @@
-using System.Net;
 using ApplicationCore.Interfaces.AdminService;
 using ApplicationCore.Models.QuizAggregate;
 using AutoMapper;
-using Microsoft.AspNetCore.Http.HttpResults;
+using FluentValidation;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using WebAPI.Dto;
+using WebAPI.Validators;
 
 
 namespace WebAPI.Controllers;
@@ -16,19 +16,21 @@ public class ApiQuizAdminController : Controller
 {
     private readonly IQuizAdminService _service;
     private readonly IMapper _mapper;
-    
-    
-    public ApiQuizAdminController(IQuizAdminService service, IMapper mapper)
+    private readonly IValidator<QuizItem> _quizItemValidator;
+    private readonly IValidator<NewQuizItemValidatedDto> _newQuizItemValidatedDtoValidator;
+    public ApiQuizAdminController(IQuizAdminService service, IMapper mapper, IValidator<QuizItem>  quizItemValidator,IValidator<NewQuizItemValidatedDto> newQuizItemValidatedDtoValidator)
     {
         _service = service;
         _mapper = mapper;
+        _quizItemValidator = quizItemValidator;
+        _newQuizItemValidatedDtoValidator = newQuizItemValidatedDtoValidator;
     }
     
     //GET
     [HttpGet]
-    public ActionResult<List<Quiz>> Index()
+    public IActionResult Index()
     {
-        return _service.FindAllQuizzes() is null ? NotFound() :_service.FindAllQuizzes()  ;
+        return RedirectToPage("/Index");
     }
     
     //POST
@@ -49,16 +51,6 @@ public class ApiQuizAdminController : Controller
     {
         var quiz = _service.FindAllQuizzes().FirstOrDefault(q => q.Id == quizId);
         return quiz is null ? NotFound() : quiz;
-    }
-    
-    //GET specific item from quiz 
-    [HttpGet]
-    [Route("{quizId}/{questionID}")]
-    public ActionResult<QuizItem> GetQuizQuestion(int quizId, int questionID)
-    {
-        var quiz = _service.FindAllQuizzes().FirstOrDefault(q => q.Id == quizId);
-        var question = quiz.Items.Where(i => i.Id == questionID).FirstOrDefault();
-        return question is null ? NotFound() : question;
     }
     
     //PATCH
@@ -85,31 +77,27 @@ public class ApiQuizAdminController : Controller
         {
             QuizItem item = quiz.Items[^1];
             quiz.Items.RemoveAt(quiz.Items.Count - 1);
+            var validationResult = _quizItemValidator.Validate(item);
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors);
+            }
             _service.AddQuizItemToQuiz(quizId, item);
         }
         return Ok(_service.FindAllQuizzes().FirstOrDefault(q => q.Id == quizId));
     }
     
-    [HttpPut]
-    [Route("{quizId}")]
-    public ActionResult<Quiz> UpdateQuiz(int quizId, [FromBody] Quiz updatedQuiz)
+    [HttpPost]
+    [Route("validatortest")]
+    public IActionResult CreateQuizItem([FromBody] NewQuizItemValidatedDto dto)
     {
-        try
+        var validationResult = _newQuizItemValidatedDtoValidator.Validate(dto);
+
+        if (!validationResult.IsValid)
         {
-            var quiz = _service.UpdateQuiz(quizId, updatedQuiz);
-            return Ok(quiz);
+            return BadRequest(validationResult.Errors);
         }
-        catch (Exception ex)
-        {
-            return NotFound(new { error = ex.Message });
-        }
+
+        return Ok("✅ Pytanie zostało poprawnie dodane!");
     }
-    
-    [HttpDelete]
-    [Route("{quizId}")]
-    public ActionResult  GetQuizQuestion(int quizId)
-    {
-        return _service.DeleteQuiz(quizId) ? NoContent() : BadRequest("Quiz have items");
-    }
-    
 }

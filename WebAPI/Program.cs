@@ -9,6 +9,7 @@ using Infrastructure.Memory;
 using Infrastructure.Memory.Generators;
 using Infrastructure.Memory.Repositories;
 using WebAPI;
+using WebAPI.Dto;
 using WebAPI.Validators;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,6 +29,7 @@ builder.Services.AddSingleton<IGenericRepository<QuizItemUserAnswer, string>, Me
 builder.Services.AddSingleton<IQuizUserService, QuizUserService>();
 builder.Services.AddSingleton<IQuizAdminService, QuizAdminService>();
 builder.Services.AddScoped<IValidator<QuizItem>, QuizItemValidator>();
+builder.Services.AddScoped<IValidator<NewQuizItemValidatedDto>, NewQuizItemValidatedDtoValidator>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
