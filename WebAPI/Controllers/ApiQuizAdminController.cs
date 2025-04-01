@@ -100,4 +100,26 @@ public class ApiQuizAdminController : Controller
 
         return Ok("✅ Pytanie zostało poprawnie dodane!");
     }
+    
+    [HttpPut]
+    [Route("{quizId}")]
+    public ActionResult<Quiz> UpdateQuiz(int quizId, [FromBody] Quiz updatedQuiz)
+    {
+        try
+        {
+            var quiz = _service.UpdateQuiz(quizId, updatedQuiz);
+            return Ok(quiz);
+        }
+        catch (Exception ex)
+        {
+            return NotFound(new { error = ex.Message });
+        }
+    }
+     
+    [HttpDelete]
+    [Route("{quizId}")]
+    public ActionResult  GetQuizQuestion(int quizId)
+    {
+        return _service.DeleteQuiz(quizId) ? NoContent() : BadRequest("Quiz have items");
+    }
 }

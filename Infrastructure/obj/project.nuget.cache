@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "USQd+EYTNsE=",
+  "dgSpecHash": "39G3HupNOKk=",
   "success": true,
   "projectFilePath": "D:\\RiderProjects\\prog_ap_back\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\bluej\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
     "C:\\Users\\bluej\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\9.0.2\\microsoft.aspnetcore.connections.abstractions.9.0.2.nupkg.sha512",
     "C:\\Users\\bluej\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\9.0.2\\microsoft.aspnetcore.http.connections.client.9.0.2.nupkg.sha512",
     "C:\\Users\\bluej\\.nuget\\packages\\microsoft.aspnetcore.http.connections.common\\9.0.2\\microsoft.aspnetcore.http.connections.common.9.0.2.nupkg.sha512",
