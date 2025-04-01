@@ -33,6 +33,14 @@ public class ApiQuizAdminController : Controller
         return RedirectToPage("/Index");
     }
     
+    [HttpGet]
+    [Route("all")]
+    public ActionResult<List<Quiz>> GetQuizzes()
+    {
+        var quiz = _service.FindAllQuizzes();
+        return quiz is null ? NotFound() : quiz;
+    }
+    
     //POST
     [HttpPost]
     public ActionResult<object> AddQuiz(LinkGenerator link, NewQuizDto dto)

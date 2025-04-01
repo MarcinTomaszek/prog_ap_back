@@ -69,13 +69,13 @@ Content-Type: application/json-patch+json
 GET {{WebAPI_HostAddress}}/api/v1/admin/quizzes/1
 ###
 GET {{WebAPI_HostAddress}}/api/v1/admin/quizzes/1/1
-###
-GET {{WebAPI_HostAddress}}/api/v1/admin/quizzes
+### show all quizzes
+GET {{WebAPI_HostAddress}}/api/v1/admin/quizzes/all
 ###
 GET {{WebAPI_HostAddress}}/api/v1/admin/quizzes/3
-###
+### invalid delete - quiz have question
 DELETE {{WebAPI_HostAddress}}/api/v1/admin/quizzes/1
-###
+### valid delete - quiz don't have question
 DELETE {{WebAPI_HostAddress}}/api/v1/admin/quizzes/2
 ###
 PUT {{WebAPI_HostAddress}}/api/v1/admin/quizzes/1
